@@ -21,7 +21,7 @@ Build jar and create docker image
 
 Run Docker application container
 
-    docker run -d -p 7979:7979 --name <name_of_app_container> --net backend --link <mongo_container_name>:mongo <name_of_the__app_image>
+    docker run -d -p 7979:7979 --name <name_of_app_container> --link <mongo_container_name>:mongo <name_of_the__app_image>
 
 
 ------------
