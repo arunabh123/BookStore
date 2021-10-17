@@ -43,6 +43,7 @@ Run Docker application container
 5. Various validations on requests are in place.
 6. **Tech stack** used :  Java , spring boot, mongoDB.
 7. An overall **code coverage** of **>85%** is achived.
+8. **Caffene JVM caching** in implemented on **monthly stats** for faster access with a **TTL of 24 HRS** cleaned by a scheduled process.
 
 ------------
 
