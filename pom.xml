@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.getir.demo</groupId>
 	<artifactId>bookstore</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>bookstore</name>
 	<description>Demo Bookstore App</description>
 	<properties>
