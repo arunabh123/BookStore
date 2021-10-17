@@ -35,9 +35,6 @@ public class OrderService {
 	@Autowired
 	private OrderRepository orderRepo;
 	
-	@Autowired
-	private CustomerService customerService;
-
 	@Transactional
 	public synchronized Order placeOrder(List<OrderRequest> orderRequests, Customer customer) {
 		this.isInventoryAvailable(orderRequests);
@@ -85,15 +82,9 @@ public class OrderService {
 		order.setAmount(amount);
 		order.setItemCount(itemCount);
 		order = orderRepo.save(order);
-		//this.attachOrderToCustomer(customer, order);
 		return order;
 	}
 	
-	/*
-	 * private void attachOrderToCustomer(Customer customer, Order order) {
-	 * customer.getOrders().add(order); customerService.updateCustomer(customer); }
-	 */
-
 	private void updateInventory(Order order) {
 		for (OrderDetail orderDetail : order.getOrderDetails()) {
 			Book book = orderDetail.getBook();
