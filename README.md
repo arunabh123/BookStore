@@ -36,14 +36,15 @@ Run Docker application container
 ------------
 
 ### Design considerations
-1. Apart from the registration end points all end points are secured and need to have a **Authorization header** sent in the request.
-2. There are 2 actors in the app the **Customer** and the **Admin**. the **Customer token** is returned in the response when he/she **registers**, simmilarly for the **Admin token** is generated on **admin registration**. These tokens need to be sent in the Authorization header while accessing the endpoints.
-3. **Admin token** is needed to access **add books, update book inventory , search order by id and search order by date** endpoints.
+1. Apart from registration end points, rest all end points are secured and need an **Authorization header** in the request.
+2. There are 2 actors in the app the **Customer** and the **Admin**. The **Customer token** is returned in the response when he/she **registers**, similarly the **Admin token** is generated on **admin registration**. These tokens need to be sent in the Authorization header while accessing the endpoints.
+3. **Admin token** is needed to access **add books, update book inventory , search-order-by-id and search-order-by-date** endpoints.
 4. **Customer token** is needed to access **place new order , view customer orders and view customer monthly statistics** endpoints.
-5. Various validations on requests are in place.
-6. **Tech stack** used :  Java , spring boot, mongoDB.
-7. An overall **code coverage** of **>85%** is achived.
-8. **Caffene JVM caching** in implemented on **monthly stats** for faster access with a **TTL of 24 HRS** cleaned by a scheduled process.
+5. Standard validations on requests are in place.
+6. All endpoints are **Restful**.
+7. **Tech stack** used :  Java , spring boot, mongoDB.
+8. An overall **code coverage** of **>85%** is achieved.
+9. **Caffene JVM caching** is implemented on **monthly stats** for faster access with a **TTL of 24 HRS**, which is cleaned by a scheduled process.
 
 ------------
 
