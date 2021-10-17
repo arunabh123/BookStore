@@ -1,7 +1,7 @@
 # BookStore App
 ### System requirements
 
-- Java 11
+- Java (8 or 11)
 - Maven
 - MongoDB
 - Docker
